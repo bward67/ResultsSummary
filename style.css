@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(38.84, 100%, 56.08%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --gradient-BG: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  --gradient-circle: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/*NOTE::afterUse transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`.
+
+fw 500, 700 800*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.flex-group {
+  display: flex;
+  flex-direction: column;
+}
+.flex-group-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.7em 0;
+}
+body {
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 375px;
+  margin-bottom: 2rem;
+}
+.score p {
+  color: var(--light-lavender);
+  font-size: 0.8em;
+}
+.result {
+  background-image: var(--gradient-BG);
+  border-radius: 0 0 1rem 1rem;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2.4em;
+}
+.summary {
+  padding: 1em;
+  gap: 1em;
+}
+.summary img {
+  width: 25%;
+  margin-right: 0.6em;
+}
+.summary-boxes {
+  border-radius: 0.5em;
+  border: none;
+  padding: 0 1em;
+}
+.summary-boxes .flex-group-row:nth-child(2) p {
+  color: var(--dark-gray-blue);
+}
+.summary-boxes .flex-group-row:nth-child(2) p span {
+  font-weight: 900;
+  margin-right: 0.5em;
+}
+p {
+  color: var(--pale-blue);
+}
+h1 {
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction-left p {
+  color: var(--light-red);
+}
+
+.memory {
+  background-color: hsla(38.84, 100%, 56.08%, 0.1);
+}
+.memory-left p {
+  color: var(--orangey-yellow);
+}
+.verbal {
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+.verbal-left p {
+  color: var(--green-teal);
+}
+.visual {
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+.visual-left p {
+  color: var(--cobalt-blue);
+}
+.score {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.circle {
+  background-image: var(--gradient-circle);
+  border-radius: 50%;
+  width: 8rem;
+  aspect-ratio: 1 / 1;
+  margin: 1em 0;
+}
+button {
+  font-family: inherit;
+  background-color: var(--dark-gray-blue);
+  border: none;
+  border-radius: 100px;
+  color: var(--white);
+  padding: 1em;
+}
+button:hover {
+  cursor: pointer;
+  background-image: var(--gradient-BG);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-width: 700px;
+    border-radius: 1em;
+    box-shadow: 0.5rem 1rem 3rem hsl(221, 100%, 96%);
+  }
+  .result {
+    border-radius: 1em;
+    flex-basis: 50%;
+  }
+  .summary {
+    flex-basis: 50%;
+  }
+  .circle {
+    width: 12rem;
+    height: 12rem;
+  }
+  h1 {
+    font-size: 4em;
+
+    line-height: 1.1;
+  }
+}
